@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "8c4920f0-a09e-4ebb-aacd-536b67b905b4",
+		"name": "Montadora e PesquisaCarro",
+		"description": "Collection to test Montadora and Carro APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28751781"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Montadora",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Ford\",\n    \"paisOrigem\": \"EUA\",\n    \"nomePresidente\": \"Jim Farley\",\n    \"dataFundacao\": \"1903-06-16\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/senac-20241-backend-exemplos/rest/montadora/todas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"senac-20241-backend-exemplos",
+						"rest",
+						"montadora",
+						"todas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar Carros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"marca\" : \"Ford\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/senac-20241-backend-exemplos/rest/carro/filtro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"senac-20241-backend-exemplos",
+						"rest",
+						"carro",
+						"filtro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
